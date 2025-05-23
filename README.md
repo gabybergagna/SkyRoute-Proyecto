@@ -56,8 +56,8 @@ El objetivo de esta aplicación es facilitar la gestión de ventas mediante un s
 
 ## 👥 Integrantes del equipo (Grupo 18)
 
-- 👩‍💻 Ana Laura Giraudo — [laura123g](https://github.com/laura123g)
-- 👨‍💻 Fabricio Palacios — [Fabricio2712](https://github.com/Fabricio2712)
+- 👩‍💻 Ana Laura Giraudo — [Lalygiraudo](https://github.com/Lalygiraudo)
+- 👨‍💻 Fabricio Palacios — [FabricioPalacios](https://github.com/FabricioPalacios)
 - 👩‍💻 Gabriela Bergagna — [gabybergagna](https://github.com/gabybergagna)
 - 👩‍💻 Jennifer Moreno — [JenniMoreno](https://github.com/JenniMoreno)
 - 👨‍💻 Mariano Barboza — [marianombarboza](https://github.com/marianombarboza)
