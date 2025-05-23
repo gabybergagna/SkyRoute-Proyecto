@@ -69,4 +69,4 @@ El objetivo de esta aplicación es facilitar la gestión de ventas mediante un s
 
 1. Cloná este repositorio o descargalo como `.zip`:
    ```bash
-   git clone https://github.com/<usuario>/<repositorio>.git
+   git clone https://github.com/gabybergagna/SkyRoute-Proyecto.git
