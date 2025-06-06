@@ -1,72 +1,141 @@
 # 🌐 Sistema de Ventas - SkyRoute S.R.L.
 
-Bienvenidos al sistema de ventas secuencial de **SkyRoute S.R.L.**, una empresa ficticia dedicada a la comercialización de paquetes turísticos. Este proyecto fue desarrollado con fines educativos para modelar el registro de ventas de manera clara, segura y eficiente.
+Bienvenidos al sistema de ventas secuencial de **SkyRoute S.R.L.**, una empresa dedicada a la comercialización de paquetes turísticos. Este proyecto fue desarrollado con fines educativos para modelar el registro de ventas de manera clara, segura y eficiente.
 
 ---
 
+## Índice
 <details>
-<summary><strong>📌 Índice</strong></summary>
+  <summary>📂 Contenidos</summary>
 
-- [ Introducción](#-introducción)
-- [ Objetivo del proyecto](#-objetivo-del-proyecto)
-- [ Archivos incluidos](#-archivos-incluidos)
-- [ Integrantes del equipo](#-integrantes-del-equipo)
-- [ Cómo ejecutar el sistema](#-cómo-ejecutar-el-sistema)
-- [ Modelo de base de datos](#-modelo-de-base-de-datos)
-- [ Informe legal y ético](#-informe-legal-y-ético)
-- [ Recomendaciones adicionales](#-recomendaciones-adicionales)
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Integrantes del Equipo](#integrantes-del-equipo)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Funcionalidades](#funcionalidades)
+  - [Gestión de Clientes](#gestión-de-clientes)
+  - [Gestión de Destinos](#gestión-de-destinos)
+  - [Gestión de Ventas](#gestión-de-ventas)
+  - [Botón de Arrepentimiento](#botón-de-arrepentimiento)
+- [Base de Datos](#base-de-datos)
+  - [Estructura](#estructura)
+  - [Datos de Ejemplo](#datos-de-ejemplo)
+  - [Consultas Relevantes](#consultas-relevantes)
+- [Instrucciones de Ejecución](#instrucciones-de-ejecución)
+- [Ética y Ejercicio Profesional](#ética-y-ejercicio-profesional)
+- [Conclusiones](#conclusiones)
 
 </details>
 
 ---
 
-## Introducción
+## Descripción del Proyecto
 
-Para una empresa del rubro turístico, como **SkyRoute S.R.L.**, es clave contar con un sistema informático que permita gestionar la información de clientes, destinos disponibles y ventas realizadas de manera organizada.  
-Este sistema fue desarrollado en el lenguaje **Python** utilizando un enfoque **secuencial**, sin bases de datos externas, ideal para proyectos iniciales o demostrativos.
-
----
-
-## Objetivo del proyecto
-
-El objetivo de esta aplicación es facilitar la gestión de ventas mediante un sistema sencillo que permita:
-
-- Registrar una venta
-- Consultar un listado de ventas realizadas
-
-### Los datos que se almacenan por cada venta son:
-
-- Nombre del cliente
-- Destino elegido
-- Monto de la operación
-- Estado del evento (vigente, cancelado, etc.)
+SkyRoute es un sistema integral diseñado para gestionar clientes, destinos y ventas de una empresa de servicios turísticos. Implementa un módulo de arrepentimiento que permite anular ventas recientes, cumpliendo con las mejores prácticas en gestión de datos y protección legal. La arquitectura modular y el uso de MySQL garantizan escalabilidad, mantenibilidad y robustez en la gestión de la información.
 
 ---
 
-## 📁 Archivos incluidos
+## Integrantes del Equipo (Grupo 18)
 
-| Archivo                      | Descripción                                                                 |
-|-----------------------------|-----------------------------------------------------------------------------|
-| `main.py`                   | Script principal con el flujo del sistema (estructurado sin funciones).     |
-| `modelo_base_de_datos.png`  | Imagen con el diseño lógico del modelo de datos usado en el sistema.        |
-| `informe_legal_etico.md`    | Análisis sobre el tratamiento ético y legal de los datos personales.        |
-| `README.md`                 | Este archivo, que documenta todo el proyecto.                              |
-
----
-
-## 👥 Integrantes del equipo (Grupo 18)
-
-- 👩‍💻 Ana Laura Giraudo — [Lalygiraudo](https://github.com/Lalygiraudo)
-- 👨‍💻 Fabricio Palacios — [FabricioPalacios](https://github.com/FabricioPalacios)
-- 👩‍💻 Gabriela Bergagna — [gabybergagna](https://github.com/gabybergagna)
-- 👩‍💻 Jennifer Moreno — [JenniMoreno](https://github.com/JenniMoreno)
-- 👨‍💻 Mariano Barboza — [marianombarboza](https://github.com/marianombarboza)
-- 👨‍💻 Patricio Henrry — [PatricioHenrry](https://github.com/PatricioHenrry)
+| Nombre              | GitHub                                     |
+|---------------------|--------------------------------------------|
+| 👩‍💻 Ana Laura Giraudo  | [Lalygiraudo](https://github.com/Lalygiraudo)         |
+| 👨‍💻 Fabricio Palacios  | [FabricioPalacios](https://github.com/FabricioPalacios) |
+| 👩‍💻 Gabriela Bergagna  | [gabybergagna](https://github.com/gabybergagna)          |
+| 👩‍💻 Jennifer Moreno    | [JenniMoreno](https://github.com/JenniMoreno)           |
+| 👨‍💻 Mariano Barboza    | [marianombarboza](https://github.com/marianombarboza)     |
+| 👨‍💻 Patricio Henrry   | [PatricioHenrry](https://github.com/PatricioHenrry)      |
 
 ---
 
-## 🚀 Cómo ejecutar el sistema
+## Estructura del Proyecto
 
-1. Cloná este repositorio o descargalo como `.zip`:
-   ```bash
-   git clone https://github.com/gabybergagna/SkyRoute-Proyecto.git
+skyroute/
+├── config.py # Configuración de conexión a la base de datos
+├── main.py # Archivo principal con menú de opciones
+├── conexion_base_datos.py # Módulo para conexión y operaciones MySQL
+├── gestion_clientes.py # Funciones para alta, baja, modificación, listado de clientes
+├── gestion_destinos.py # Funciones para alta, baja, modificación, listado de destinos
+├── gestion_ventas.py # Registro de ventas y botón de arrepentimiento
+├── README.md # Documentación del proyecto
+└── sql/
+├── schema.sql # Sentencias DDL para creación de base de datos y tablas
+├── inserts.sql # Sentencias DML para inserción de datos de ejemplo
+└── consultas.sql # Consultas SQL relevantes para el sistema
+
+yaml
+Copiar
+Editar
+
+---
+
+## Tecnologías Utilizadas
+
+- **Python 3.8+**
+- **MySQL 8+**
+- Biblioteca **mysql.connector** para conexión Python-MySQL
+- Control de versiones con **Git** y hospedaje en **GitHub**
+- Arquitectura modular basada en funciones para alta cohesión y bajo acoplamiento
+
+---
+
+## Funcionalidades
+
+### Gestión de Clientes
+- Agregar cliente con datos: razón social, CUIT y correo electrónico.
+- Listar todos los clientes registrados.
+- Modificar datos específicos de un cliente existente.
+- Eliminar clientes.
+
+### Gestión de Destinos
+- Registrar destinos con ciudad, país y costo base.
+- Listar destinos disponibles.
+- Modificar información de destinos.
+- Eliminar destinos.
+
+### Gestión de Ventas
+- Registrar ventas asociando cliente, destino, fecha y costo.
+- Control de estado de la venta: “Activa” o “Anulada”.
+
+### Botón de Arrepentimiento
+- Permitir anulación de una venta realizada dentro de los últimos 5 minutos.
+- Cambiar estado de la venta a “Anulada”.
+- Registrar fecha y hora de anulación para trazabilidad.
+
+---
+
+## Base de Datos
+
+### Estructura
+
+Se ha implementado un esquema relacional en MySQL que incluye las tablas: 
+
+- `clientes`
+- `destinos`
+- `ventas`
+
+Cada tabla cuenta con sus claves primarias y relaciones foráneas que aseguran la integridad referencial.
+
+### Datos de Ejemplo
+
+Se insertaron al menos 3 registros por tabla para facilitar pruebas funcionales y demostraciones.
+
+### Consultas Relevantes
+
+Entre las consultas implementadas destacan:
+
+- Listar todos los clientes.
+- Mostrar ventas realizadas en una fecha específica.
+- Obtener la última venta por cliente y su fecha.
+- Listar destinos que comienzan con la letra “S”.
+- Mostrar cantidad de ventas agrupadas por país.
+
+---
+
+## Instrucciones de Ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/gabybergagna/skyroute.git
+cd skyroute
