@@ -35,7 +35,7 @@ SkyRoute es un sistema integral diseñado para gestionar clientes, destinos y ve
 
 ---
 
-## Integrantes del Equipo (Grupo 18)
+## Integrantes del Equipo (Grupo 35)
 
 | Nombre              | GitHub                                     |
 |---------------------|--------------------------------------------|
