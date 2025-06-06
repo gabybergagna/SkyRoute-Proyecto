@@ -50,22 +50,19 @@ SkyRoute es un sistema integral diseñado para gestionar clientes, destinos y ve
 
 ## Estructura del Proyecto
 
+```plaintext
 skyroute/
-├── config.py # Configuración de conexión a la base de datos
-├── main.py # Archivo principal con menú de opciones
-├── conexion_base_datos.py # Módulo para conexión y operaciones MySQL
-├── gestion_clientes.py # Funciones para alta, baja, modificación, listado de clientes
-├── gestion_destinos.py # Funciones para alta, baja, modificación, listado de destinos
-├── gestion_ventas.py # Registro de ventas y botón de arrepentimiento
-├── README.md # Documentación del proyecto
+├── config.py                  # Configuración de conexión a la base de datos
+├── main.py                    # Archivo principal con menú de opciones
+├── conexion_base_datos.py     # Módulo para conexión y operaciones MySQL
+├── gestion_clientes.py        # Funciones para alta, baja, modificación, listado de clientes
+├── gestion_destinos.py        # Funciones para alta, baja, modificación, listado de destinos
+├── gestion_ventas.py          # Registro de ventas y botón de arrepentimiento
+├── README.md                  # Documentación del proyecto
 └── sql/
-├── schema.sql # Sentencias DDL para creación de base de datos y tablas
-├── inserts.sql # Sentencias DML para inserción de datos de ejemplo
-└── consultas.sql # Consultas SQL relevantes para el sistema
-
-yaml
-Copiar
-Editar
+    ├── schema.sql            # Sentencias DDL para creación de base de datos y tablas
+    ├── inserts.sql           # Sentencias DML para inserción de datos de ejemplo
+    └── consultas.sql         # Consultas SQL relevantes para el sistema
 
 ---
 
