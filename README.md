@@ -1,3 +1,5 @@
+![Logo de SkyRoute](doc/logo.png)
+
 # 🌐 Sistema de Ventas - SkyRoute S.R.L.
 
 Bienvenidos al sistema de ventas secuencial de **SkyRoute S.R.L.**, una empresa dedicada a la comercialización de paquetes turísticos. Este proyecto fue desarrollado con fines educativos para modelar el registro de ventas de manera clara, segura y eficiente.
@@ -50,7 +52,6 @@ SkyRoute es un sistema integral diseñado para gestionar clientes, destinos y ve
 
 ## Estructura del Proyecto
 
-```plaintext
 skyroute/
 ├── config.py                  # Configuración de conexión a la base de datos
 ├── main.py                    # Archivo principal con menú de opciones
@@ -92,11 +93,11 @@ skyroute/
 
 ### Gestión de Ventas
 - Registrar ventas asociando cliente, destino, fecha y costo.
-- Control de estado de la venta: “Activa” o “Anulada”.
+- Control de estado de la venta: "Activa" o "Anulada".
 
 ### Botón de Arrepentimiento
 - Permitir anulación de una venta realizada dentro de los últimos 5 minutos.
-- Cambiar estado de la venta a “Anulada”.
+- Cambiar estado de la venta a "Anulada".
 - Registrar fecha y hora de anulación para trazabilidad.
 
 ---
@@ -124,7 +125,7 @@ Entre las consultas implementadas destacan:
 - Listar todos los clientes.
 - Mostrar ventas realizadas en una fecha específica.
 - Obtener la última venta por cliente y su fecha.
-- Listar destinos que comienzan con la letra “S”.
+- Listar destinos que comienzan con la letra "S".
 - Mostrar cantidad de ventas agrupadas por país.
 
 ---
