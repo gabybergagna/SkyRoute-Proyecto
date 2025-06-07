@@ -10,7 +10,7 @@ El grupo de trabajo está legalmente constituido como una **Sociedad por Accione
 ---
 
 ## 2. Relación Legal con SkyRoute S.R.L.  
-La vinculación entre el grupo desarrollador (Grupo 18 SAS) y SkyRoute S.R.L. se enmarca como un **contrato de prestación de servicios entre empresas**.  
+La vinculación entre el grupo desarrollador (Grupo 35 SAS) y SkyRoute S.R.L. se enmarca como un **contrato de prestación de servicios entre empresas**.  
 La SAS actúa como **proveedora externa de desarrollo de software**, sin relación de dependencia entre los integrantes del grupo y la empresa contratante.
 
 En caso de que SkyRoute decida interrumpir el contrato o reemplazar al proveedor, la SAS gestionará las acciones correspondientes como entidad jurídica, sin comprometer individualmente a sus miembros.
