@@ -1,19 +1,210 @@
 USE skyroute_db;
 
--- Clientes de ejemplo
-INSERT INTO clientes (razon_social, cuit, correo) VALUES
-('Empresa Alpha', '20-12345678-9', 'contacto@alpha.com'),
-('Beta S.A.', '27-98765432-1', 'info@beta.com'),
-('Gamma SRL', '30-11223344-5', 'ventas@gamma.com');
 
--- Destinos de ejemplo
-INSERT INTO destinos (ciudad, pais, costo_base) VALUES
-('Salta', 'Argentina', 5000.00),
-('Santiago', 'Chile', 7000.00),
-('São Paulo', 'Brasil', 8000.00);
+-- 50 Clientes
 
--- Ventas de ejemplo
-INSERT INTO ventas (id_cliente, id_destino, fecha, costo, estado) VALUES
-(1, 1, '2025-06-01 10:00:00', 5000.00, 'Activa'),
-(2, 2, '2025-06-02 14:30:00', 7200.00, 'Activa'),
-(3, 3, '2025-06-03 09:15:00', 8500.00, 'Anulada');
+INSERT INTO clientes (nombre, apellido, dni, email, telefono) VALUES
+('Juan', 'Perez', '20123456', 'juan.perez@example.com', '1123456789'),
+('Maria', 'Gonzales', '22987654', 'maria.gonzales@example.com', '1134567890'),
+('Carlos', 'Rodriguez', '25654321', 'carlos.rodriguez@example.com', '1145678901'),
+('Ana', 'Fernandez', '28765432', 'ana.fernandez@example.com', '1156789012'),
+('Pedro', 'Lopez', '30234567', 'pedro.lopez@example.com', '1167890123'),
+('Sofia', 'Martinez', '32876543', 'sofia.martinez@example.com', '1178901234'),
+('Luis', 'Sanchez', '35432109', 'luis.sanchez@example.com', '1189012345'),
+('Laura', 'Garcia', '38098765', 'laura.garcia@example.com', '1190123456'),
+('Diego', 'Ramirez', '40123456', 'diego.ramirez@example.com', '1121098765'),
+('Valeria', 'Torres', '42987654', 'valeria.torres@example.com', '1132109876'),
+('Martin', 'Diaz', '21345678', 'martin.diaz@example.com', '1143210987'),
+('Paula', 'Ruiz', '23098765', 'paula.ruiz@example.com', '1154321098'),
+('Andres', 'Gomez', '26789012', 'andres.gomez@example.com', '1165432109'),
+('Florencia', 'Acosta', '29456789', 'florencia.acosta@example.com', '1176543210'),
+('Gabriel', 'Benitez', '31012345', 'gabriel.benitez@example.com', '1187654321'),
+('Emilia', 'Castro', '33678901', 'emilia.castro@example.com', '1198765432'),
+('Ricardo', 'Romero', '36234567', 'ricardo.romero@example.com', '1120987654'),
+('Brenda', 'Moyano', '39890123', 'brenda.moyano@example.com', '1130123456'),
+('Federico', 'Ortiz', '41567890', 'federico.ortiz@example.com', '1141234567'),
+('Julieta', 'Herrera', '43210987', 'julieta.herrera@example.com', '1152345678'),
+('Ignacio', 'Moreno', '20567890', 'ignacio.moreno@example.com', '1163456789'),
+('Camila', 'Vargas', '24123456', 'camila.vargas@example.com', '1174567890'),
+('Roberto', 'Jimenez', '27890123', 'roberto.jimenez@example.com', '1185678901'),
+('Daniela', 'Aguirre', '30543210', 'daniela.aguirre@example.com', '1196789012'),
+('Pablo', 'Navarro', '32109876', 'pablo.navarro@example.com', '1120123456'),
+('Mariana', 'Cordoba', '34765432', 'mariana.cordoba@example.com', '1131234567'),
+('Gustavo', 'Sosa', '37321098', 'gustavo.sosa@example.com', '1142345678'),
+('Agustina', 'Luna', '40098765', 'agustina.luna@example.com', '1153456789'),
+('Alejandro', 'Rojas', '42789012', 'alejandro.rojas@example.com', '1164567890'),
+('Silvina', 'Paz', '44456789', 'silvina.paz@example.com', '1175678901'),
+('Franco', 'Figueroa', '21876543', 'franco.figueroa@example.com', '1186789012'),
+('Lucia', 'Salazar', '25543210', 'lucia.salazar@example.com', '1197890123'),
+('Esteban', 'Blanco', '28210987', 'esteban.blanco@example.com', '1128901234'),
+('Veronica', 'Godoy', '30987654', 'veronica.godoy@example.com', '1139012345'),
+('Joaquin', 'Ramos', '33543210', 'joaquin.ramos@example.com', '1140123456'),
+('Natalia', 'Nuñez', '36109876', 'natalia.nunez@example.com', '1151234567'),
+('Sergio', 'Vazquez', '38765432', 'sergio.vazquez@example.com', '1162345678'),
+('Micaela', 'Flores', '41432109', 'micaela.flores@example.com', '1173456789'),
+('Fernando', 'Caceres', '43109876', 'fernando.caceres@example.com', '1184567890'),
+('Romina', 'Pereyra', '44789012', 'romina.pereyra@example.com', '1195678901'),
+('Manuel', 'Escobar', '22098765', 'manuel.escobar@example.com', '1120012345'),
+('Jessica', 'Ruiz Diaz', '26876543', 'jessica.ruizdiaz@example.com', '1131123456'),
+('Gonzalo', 'Miranda', '29543210', 'gonzalo.miranda@example.com', '1142234567'),
+('Marina', 'Soto', '31210987', 'marina.soto@example.com', '1153345678'),
+('Hector', 'Quinteros', '33876543', 'hector.quinteros@example.com', '1164456789'),
+('Paula', 'Villalba', '36543210', 'paula.villalba@example.com', '1175567890'),
+('Eduardo', 'Mendez', '39109876', 'eduardo.mendez@example.com', '1186678901'),
+('Soledad', 'Vega', '41789012', 'soledad.vega@example.com', '1197789012'),
+('Cristian', 'Bustos', '43456789', 'cristian.bustos@example.com', '1120890123'),
+('Silvia', 'Carrasco', '45123456', 'silvia.carrasco@example.com', '1131901234');
+
+
+
+-- 20 Destinos
+
+INSERT INTO destinos (ciudad_origen, ciudad_destino, precio_base, duracion_estimada) VALUES
+('Buenos Aires', 'Bariloche', 85000.00, 3),
+('Buenos Aires', 'Mendoza', 72000.00, 2),
+('Buenos Aires', 'Cataratas del Iguazu', 95000.00, 4),
+('Buenos Aires', 'Salta', 88000.00, 3),
+('Buenos Aires', 'Cordoba', 60000.00, 2),
+('Cordoba', 'Bariloche', 78000.00, 3),
+('Mendoza', 'Salta', 75000.00, 2),
+('Buenos Aires', 'Ushuaia', 120000.00, 5),
+('Buenos Aires', 'El Calafate', 110000.00, 4),
+('Salta', 'Jujuy', 35000.00, 1),
+('Buenos Aires', 'Mar del Plata', 55000.00, 2),
+('Cordoba', 'Mendoza', 58000.00, 2),
+('Buenos Aires', 'San Martin de los Andes', 90000.00, 3),
+('Rosario', 'Bariloche', 80000.00, 3),
+('Buenos Aires', 'Puerto Madryn', 98000.00, 4),
+('Mendoza', 'Bariloche', 82000.00, 3),
+('Buenos Aires', 'Tucuman', 70000.00, 2),
+('Cordoba', 'Cataratas del Iguazu', 85000.00, 3),
+('Buenos Aires', 'San Rafael', 68000.00, 2),
+('Salta', 'Quebrada de Humahuaca', 40000.00, 1);
+
+
+
+-- 50 Ventas (Simulando ventas desde el 1 de Mayo 2025 hasta hoy)
+
+INSERT INTO ventas (id_cliente, fecha_venta, total, estado) VALUES
+(1, '2025-05-01', 170000.00, 'Confirmada'), 
+(2, '2025-05-02', 72000.00, 'Confirmada'),  
+(3, '2025-05-03', 95000.00, 'Confirmada'),
+(4, '2025-05-04', 88000.00, 'Confirmada'),
+(5, '2025-05-05', 120000.00, 'Confirmada'), 
+(6, '2025-05-06', 78000.00, 'Confirmada'),
+(7, '2025-05-07', 75000.00, 'Confirmada'),
+(8, '2025-05-08', 240000.00, 'Confirmada'), 
+(9, '2025-05-09', 110000.00, 'Confirmada'),
+(10, '2025-05-10', 35000.00, 'Confirmada'),
+(11, '2025-05-11', 55000.00, 'Confirmada'),
+(12, '2025-05-12', 58000.00, 'Confirmada'),
+(13, '2025-05-13', 180000.00, 'Confirmada'), 
+(14, '2025-05-14', 80000.00, 'Confirmada'),
+(15, '2025-05-15', 98000.00, 'Confirmada'),
+(16, '2025-05-16', 82000.00, 'Confirmada'),
+(17, '2025-05-17', 70000.00, 'Confirmada'),
+(18, '2025-05-18', 85000.00, 'Confirmada'),
+(19, '2025-05-19', 68000.00, 'Confirmada'),
+(20, '2025-05-20', 40000.00, 'Confirmada'),
+(21, '2025-05-21', 85000.00, 'Confirmada'),
+(22, '2025-05-22', 72000.00, 'Confirmada'),
+(23, '2025-05-23', 95000.00, 'Confirmada'),
+(24, '2025-05-24', 88000.00, 'Confirmada'),
+(25, '2025-05-25', 60000.00, 'Confirmada'),
+(26, '2025-05-26', 78000.00, 'Confirmada'),
+(27, '2025-05-27', 75000.00, 'Confirmada'),
+(28, '2025-05-28', 120000.00, 'Confirmada'),
+(29, '2025-05-29', 110000.00, 'Confirmada'),
+(30, '2025-05-30', 35000.00, 'Confirmada'),
+(31, '2025-05-31', 55000.00, 'Confirmada'),
+(32, '2025-06-01', 58000.00, 'Confirmada'),
+(33, '2025-06-02', 90000.00, 'Confirmada'),
+(34, '2025-06-03', 80000.00, 'Confirmada'),
+(35, '2025-06-04', 98000.00, 'Confirmada'),
+(36, '2025-06-05', 82000.00, 'Confirmada'),
+(37, '2025-06-06', 70000.00, 'Confirmada'),
+(38, '2025-06-07', 85000.00, 'Confirmada'),
+(39, '2025-06-07', 68000.00, 'Confirmada'),
+(40, '2025-06-07', 40000.00, 'Confirmada'),
+(41, '2025-06-06', 170000.00, 'Confirmada'), 
+(42, '2025-06-05', 72000.00, 'Confirmada'),
+(43, '2025-06-04', 95000.00, 'Confirmada'),
+(44, '2025-06-03', 88000.00, 'Confirmada'),
+(45, '2025-06-02', 120000.00, 'Confirmada'),
+(46, '2025-06-01', 78000.00, 'Confirmada'),
+(47, '2025-05-31', 75000.00, 'Confirmada'),
+(48, '2025-05-30', 240000.00, 'Confirmada'),
+(49, '2025-05-29', 110000.00, 'Confirmada'),
+(50, '2025-05-28', 35000.00, 'Confirmada');
+
+
+
+-- 50 Detalles de Venta
+
+INSERT INTO detalle_venta (id_venta, id_destino, cantidad) VALUES
+(1, 1, 2),    
+(2, 2, 1),    
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 2),    
+(6, 6, 1),
+(7, 7, 1),
+(8, 8, 2),    
+(9, 9, 1),
+(10, 10, 1),
+(11, 11, 1),
+(12, 12, 1),
+(13, 13, 2),  
+(14, 14, 1),
+(15, 15, 1),
+(16, 16, 1),
+(17, 17, 1),
+(18, 18, 1),
+(19, 19, 1),
+(20, 20, 1),
+(21, 1, 1),   
+(22, 2, 1),
+(23, 3, 1),
+(24, 4, 1),
+(25, 5, 1),
+(26, 6, 1),
+(27, 7, 1),
+(28, 8, 1),
+(29, 9, 1),
+(30, 10, 1),
+(31, 11, 1),
+(32, 12, 1),
+(33, 13, 1),
+(34, 14, 1),
+(35, 15, 1),
+(36, 16, 1),
+(37, 17, 1),
+(38, 18, 1),
+(39, 19, 1),
+(40, 20, 1),
+(41, 1, 2),   
+(42, 2, 1),
+(43, 3, 1),
+(44, 4, 1),
+(45, 8, 1),
+(46, 6, 1),
+(47, 7, 1),
+(48, 8, 2),   
+(49, 9, 1),
+(50, 10, 1);
+
+
+
+-- 10 Arrepentimientos (Cancellation requests)
+
+INSERT INTO arrepentimientos (id_venta, fecha_solicitud, motivo, estado) VALUES
+(1, '2025-05-02', 'Cambio de planes de viaje del cliente', 'Pendiente'),
+(5, '2025-05-07', 'Problemas de salud inesperados', 'Aprobado'),
+(10, '2025-05-11', 'Encontró una mejor oferta', 'Rechazado'),
+(15, '2025-05-16', 'Errores en la fecha seleccionada', 'Pendiente'),
+(20, '2025-05-21', 'Cancelación por motivos laborales', 'Aprobado'),
+(25, '2025-05-26', 'Inconveniente con el método de pago', 'Pendiente'),
+(30, '2025-05-31', 'Fuerza mayor', 'Aprobado'),
+(35, '2025-06-05', 'Doble compra por error', 'Pendiente'),
+(40, '2025-06-07', 'No podrá viajar en las fechas seleccionadas', 'Pendiente'),
+(45, '2025-06-04', 'Problemas con documentación de viaje', 'Rechazado');
