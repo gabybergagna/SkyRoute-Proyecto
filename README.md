@@ -43,8 +43,7 @@ SkyRoute es un sistema integral diseñado para gestionar clientes, destinos y ve
 |---------------------|--------------------------------------------|
 | 👩‍💻 Ana Laura Giraudo  | [Lalygiraudo](https://github.com/Lalygiraudo)         |
 | 👨‍💻 Fabricio Palacios  | [FabricioPalacios](https://github.com/FabricioPalacios) |
-| 👩‍💻 Gabriela Bergagna  | [gabybergagna](https://github.com/gabybergagna)          |
-| 👩‍💻 Jennifer Moreno    | [JenniMoreno](https://github.com/JenniMoreno)           |
+| 👩‍💻 Gabriela Bergagna  | [gabybergagna](https://github.com/gabybergagna)          |        
 | 👨‍💻 Mariano Barboza    | [marianombarboza](https://github.com/marianombarboza)     |
 | 👨‍💻 Patricio Henrry   | [PatricioHenrry](https://github.com/PatricioHenrry)      |
 
